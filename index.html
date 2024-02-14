@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--<meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Will you be my valentine?</title>-->
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="img/flowers.png" type="image/x-icon">
+        <title>happy valentine's day ♥</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+        <script type="module" src="main.js"></script>
+    </head>
+
+    <body class="container">
+        <!-- Pembuat code: https://codepen.io/mdusmanansari/pen/BamepLe -->
+            <div class="night"></div>
+            
+            <!--<audio src="sound/perto.mp3" autoplay></audio>
+        
+            <audio autoplay="true" muted="muted">
+            <source id="musicplayer" src="sound/perto.mp3" />
+            </audio>
+        
+        <script>
+            document.querySelector('#musicplayer').play();
+        </script> -->
+        
+
+        
+    
+        
+            <audio id="audio1" src="sound/perto.mp3" autoplay loop></audio>
+        
+
+
+        <!---------------------------INICIO DAS FLORES--------------------------->
+        <!--O que vai aparecer depois de clicar nas flores-->        
+        <div class="flowers" onClick="start()">
+            <div class="flower flower--1">
+                <div class="flower__leafs flower__leafs--1">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+        
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+                <div class="flower__light flower__light--5"></div>
+                <div class="flower__light flower__light--6"></div>
+                <div class="flower__light flower__light--7"></div>
+                <div class="flower__light flower__light--8"></div>
+        
+                </div>
+                <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+                <div class="flower__line__leaf flower__line__leaf--5"></div>
+                <div class="flower__line__leaf flower__line__leaf--6"></div>
+                </div>
+            </div>
+        
+            <div class="flower flower--2">
+                <div class="flower__leafs flower__leafs--2">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+        
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+                <div class="flower__light flower__light--5"></div>
+                <div class="flower__light flower__light--6"></div>
+                <div class="flower__light flower__light--7"></div>
+                <div class="flower__light flower__light--8"></div>
+        
+                </div>
+                <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+                </div>
+            </div>
+        
+            <div class="flower flower--3">
+                <div class="flower__leafs flower__leafs--3">
+                <div class="flower__leaf flower__leaf--1"></div>
+                <div class="flower__leaf flower__leaf--2"></div>
+                <div class="flower__leaf flower__leaf--3"></div>
+                <div class="flower__leaf flower__leaf--4"></div>
+                <div class="flower__white-circle"></div>
+        
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+                <div class="flower__light flower__light--5"></div>
+                <div class="flower__light flower__light--6"></div>
+                <div class="flower__light flower__light--7"></div>
+                <div class="flower__light flower__light--8"></div>
+        
+                </div>
+                <div class="flower__line">
+                <div class="flower__line__leaf flower__line__leaf--1"></div>
+                <div class="flower__line__leaf flower__line__leaf--2"></div>
+                <div class="flower__line__leaf flower__line__leaf--3"></div>
+                <div class="flower__line__leaf flower__line__leaf--4"></div>
+                </div>
+            </div>
+        
+            <div class="grow-ans" style="--d:1.2s">
+                <div class="flower__g-long">
+                <div class="flower__g-long__top"></div>
+                <div class="flower__g-long__bottom"></div>
+                </div>
+            </div>
+        
+            <div class="growing-grass">
+                <div class="flower__grass flower__grass--1">
+                <div class="flower__grass--top"></div>
+                <div class="flower__grass--bottom"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+                <div class="flower__grass__overlay"></div>
+                </div>
+            </div>
+        
+            <div class="growing-grass">
+                <div class="flower__grass flower__grass--2">
+                <div class="flower__grass--top"></div>
+                <div class="flower__grass--bottom"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+                <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+                <div class="flower__grass__overlay"></div>
+                </div>
+            </div>
+        
+            <div class="grow-ans" style="--d:2.4s">
+                <div class="flower__g-right flower__g-right--1">
+                <div class="leaf"></div>
+                </div>
+            </div>
+        
+            <div class="grow-ans" style="--d:2.8s">
+                <div class="flower__g-right flower__g-right--2">
+                <div class="leaf"></div>
+                </div>
+            </div>
+        
+            <div class="grow-ans" style="--d:2.8s">
+                <div class="flower__g-front">
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
+                    <div class="flower__g-front__leaf"></div>
+                </div>
+                <div class="flower__g-front__line"></div>
+                </div>
+            </div>
+        
+            <div class="grow-ans" style="--d:3.2s">
+                <div class="flower__g-fr">
+                <div class="leaf"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div>
+                <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--0">
+                <div class="grow-ans" style="--d:3s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:2.2s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.4s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.6s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--1">
+                <div class="grow-ans" style="--d:3.6s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.8s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:4s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.2s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--2">
+                <div class="grow-ans" style="--d:4s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.2s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.4s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.6s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--3">
+                <div class="grow-ans" style="--d:4s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.2s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:3s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.6s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--4">
+                <div class="grow-ans" style="--d:4s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.2s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:3s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.6s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--5">
+                <div class="grow-ans" style="--d:4s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.2s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:3s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.6s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--6">
+                <div class="grow-ans" style="--d:4.2s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.4s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.6s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:4.8s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        
+            <div class="long-g long-g--7">
+                <div class="grow-ans" style="--d:3s">
+                <div class="leaf leaf--0"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.2s">
+                <div class="leaf leaf--1"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.5s">
+                <div class="leaf leaf--2"></div>
+                </div>
+                <div class="grow-ans" style="--d:3.6s">
+                <div class="leaf leaf--3"></div>
+                </div>
+            </div>
+        </div>
+        <!----------------------------FIM DAS FLORES---------------------------->
+
+        <!----------------------------INICIO DA CARTA---------------------------->
+        <!--O que vai aparecer depois de clicar na carta-->
+        <div style="display:none;" onClick="second()" class="carta" id="myDiv">
+            <div class="message">
+                <div class="flowercontainer">
+                <div class="valentines">
+                    <div class="envelope"></div>
+                    <div class="frontx"></div>
+                    <div class="card">
+                    <div class="text">Will you</br> be my </br>Valentine?</div>
+                    <div class="heart"></div>
+                    </div>
+                    <div class="hearts">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                        <div class="four"></div>
+                        <div class="five"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="shadow"></div>
+                </div>
+            </div>
+        
+            <style>
+                .message {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }        
+                .flowercontainer {
+                    position: relative;
+                }        
+                .valentines {
+                    position: relative;
+                    top: 50px;
+                    cursor: pointer;
+                    animation: up 3s linear infinite;
+                }        
+                @keyframes up {
+                    0%,
+                    100% {
+                    transform: translateY(0);
+                    }
+                    50% {
+                    transform: translateY(-30px);
+                    }
+                }        
+                .envelope {
+                    position: relative;
+                    width: 300px;
+                    height: 200px;
+                    background-color: #f08080;
+                }        
+                .envelope:before {
+                    background-color: #f08080;
+                    content: "";
+                    position: absolute;
+                    width: 212px;
+                    height: 212px;
+                    transform: rotate(45deg);
+                    top: -105px;
+                    left: 44px;
+                    border-radius: 30px 0 0 0;
+                }        
+                .card {
+                    position: absolute;
+                    background-color: #eae2b7;
+                    width: 270px;
+                    height: 170px;
+                    top: 5px;
+                    left: 15px;
+                    box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+                }        
+                .card:before {
+                    content: "";
+                    position: absolute;
+                    border: 3px solid #003049;
+                    width: 240px;
+                    height: 140px;
+                    left: 12px;
+                    top: 12px;
+                }        
+                .text {
+                    position: absolute;
+                    font-family: "Brush Script MT", cursive;
+                    font-size: 28px;
+                    text-align: center;
+                    line-height: 25px;
+                    top: 19px;
+                    left: 85px;
+                    color: #003049;
+                }        
+                .heart {
+                    background-color: #d62828;
+                    display: inline-block;
+                    height: 30px;
+                    margin: 0 10px;
+                    position: relative;
+                    top: 110px;
+                    left: 105px;
+                    transform: rotate(-45deg);
+                    width: 30px;
+                }        
+                .heart:before, .heart:after {
+                    content: "";
+                    background-color: #d62828;
+                    border-radius: 50%;
+                    height: 30px;
+                    position: absolute;
+                    width: 30px;
+                }        
+                .heart:before {
+                    top: -15px;
+                    left: 0;
+                }        
+                .heart:after {
+                    left: 15px;
+                    top: 0;
+                }        
+                .hearts {
+                    position: absolute;
+                    top: 0;
+                }        
+                .one, .two, .three, .four, .five {
+                    background-color: red;
+                    display: inline-block;
+                    height: 10px;
+                    margin: 0 10px;
+                    position: relative;
+                    transform: rotate(-45deg);
+                    width: 10px;
+                    top: 50px;
+                }        
+                .one:before, .one:after, .two:before, .two:after, .three:before, .three:after, .four:before, .four:after, .five:before, .five:after {
+                    content: "";
+                    background-color: red;
+                    border-radius: 50%;
+                    height: 10px;
+                    position: absolute;
+                    width: 10px;
+                }        
+                .one:before, .two:before, .three:before, .four:before, .five:before {
+                    top: -5px;
+                    left: 0;
+                }        
+                .one:after, .two:after, .three:after, .four:after, .five:after {
+                    left: 5px;
+                    top: 0;
+                }        
+                .one {
+                    left: 10px;
+                    animation: heart 1s ease-out infinite;
+                }        
+                .two {
+                    left: 30px;
+                    animation: heart 2s ease-out infinite;
+                }        
+                .three {
+                    left: 50px;
+                    animation: heart 1.5s ease-out infinite;
+                }        
+                .four {
+                    left: 70px;
+                    animation: heart 2.3s ease-out infinite;
+                }        
+                .five {
+                    left: 90px;
+                    animation: heart 1.7s ease-out infinite;
+                }        
+                @keyframes heart {
+                    0% {
+                    transform: translateY(0) rotate(-45deg) scale(0.3);
+                    opacity: 1;
+                    }
+                    100% {
+                    transform: translateY(-150px) rotate(-45deg) scale(1.3);
+                    opacity: 0.5;
+                    }
+                }        
+                .frontx {
+                    position: absolute;
+                    border-right: 180px solid #f4978e;
+                    border-top: 95px solid transparent;
+                    border-bottom: 100px solid transparent;
+                    left: 120px;
+                    top: 5px;
+                    width: 0;
+                    height: 0;
+                    z-index: 10;
+                }        
+                .frontx:before {
+                    position: absolute;
+                    content: "";
+                    border-left: 300px solid #f8ad9d;
+                    border-top: 195px solid transparent;
+                    left: -120px;
+                    top: -95px;
+                    width: 0;
+                    height: 0;
+                }        
+                .shadow {
+                    position: absolute;
+                    width: 330px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: rgba(169,169,169,0.3);
+                    top: 550px;
+                    animation: scale 3s linear infinite;
+                    z-index: -1;
+                }        
+                @keyframes scale {
+                    0%,
+                    100% {
+                    transform: scaleX(1);
+                    }
+                    50% {
+                    transform: scaleX(0.85);
+                    }
+                }
+            </style>
+        
+            <script>
+                $(document).ready(function () {
+                    $(".flowercontainer")
+                    .mouseenter(function () {
+                        $(".card").stop().animate(
+                        {
+                            top: "-90px"
+                        },
+                        "slow"
+                        );
+                    })
+                    .mouseleave(function () {
+                        $(".card").stop().animate(
+                        {
+                            top: 0
+                        },
+                        "slow"
+                        );
+                    });
+                });
+            </script>
+        </div>
+        <!-----------------------------FIM DA CARTA----------------------------->
+
+
+        <!--------------------------INICIO DA PERGUNTA-------------------------->
+        <!--O que vai aparecer depois de clicado-->
+        <!--<div style="display:none;" onClick="second()" class="question" id="myquestion">
+            <h1 style="color: aliceblue;">Hellooozzz</h1>
+            <div id="root"></div>
+            <script type="module" src="src/main.tsx"></script>
+        </div>-->
+
+
+        <div style="display:none;" onClick="second()" class="question" id="myquestion">
+            <div class="message2">
+                <div class="flowercontainer2">
+
+                    <div class="container3">
+                        <div class="gif-container">
+                            <img src="gif1.gif" alt="Valentine Gif" class="valentine-gif">
+                        </div>
+                        <p class="sentence">Will you be my Valentine?</p>
+                        <div class="button-container">
+                            <button id="yesBtn">Yes</button>
+                            <button id="noBtn">No</button>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            let yesBtnSize = 18;
+
+                            const noBtn = document.getElementById('noBtn');
+                            const yesBtn = document.getElementById('yesBtn');
+                            const hiddenPage = document.getElementById('newpage');
+
+                            const noBtnTexts = ["Are you sure?", "What if I asked really nicely?", "Pretty please", "With a chocolate cake on top", "PLEASE BABY", "But :*(", "I am going to die", "Yep im dead", "ok ur talking to rita's ghost", "please babe", "pleaseeeee", "estoy muerta", "No :("];
+                            let currentIndex = 0;
+
+                            noBtn.addEventListener('click', function() {
+                                if (currentIndex === noBtnTexts.length - 1) {
+                                    noBtn.textContent = noBtnTexts[currentIndex];
+                                    currentIndex = 0; // Reset to the first sentence
+                                } else {
+                                    noBtn.textContent = noBtnTexts[currentIndex];
+                                    currentIndex++;
+                                }
+
+                                yesBtnSize += 5;
+                                yesBtn.style.fontSize = `${yesBtnSize}px`;
+                            });
+
+                            yesBtn.addEventListener('click', function(event) {
+                                /*hiddenPage.style.display = "block"; // Show the hidden content on the new page
+                                event.preventDefault(); // Prevent the default behavior of the Yes button*/
+
+                                // Remove all child elements inside the container3 div
+                                const container3 = document.querySelector('.container3');
+                                container3.innerHTML = '';
+
+                                // Create the div for the updated GIF container with class "gif-container2"
+                                const gifContainer2 = document.createElement('div');
+                                gifContainer2.classList.add('gif-container2');
+
+                                // Create the img element for the updated GIF
+                                const gifImage2 = document.createElement('img');
+                                gifImage2.setAttribute('src', 'gif2.gif');
+                                gifImage2.classList.add('yes-gif');
+                                gifImage2.setAttribute('alt', 'Yes Gif');
+
+                                // Append the img element to the updated GIF container div
+                                gifContainer2.appendChild(gifImage2);
+
+                                // Create the paragraph for the updated text with class "yes-text"
+                                const yesText = document.createElement('p');
+                                yesText.classList.add('yes-text');
+                                yesText.style.fontSize = '30px';
+                                yesText.style.marginTop = '50px';
+                                yesText.style.color = 'white';
+                                yesText.style.fontWeight = 'bold';
+                                yesText.textContent = 'WOOOOOO!!! I love you babyyy!! ;))'; // Set the text content
+
+                                // Append the paragraph and updated GIF container to the container3 div
+                                container3.appendChild(gifContainer2);
+                                container3.appendChild(yesText);
+
+
+                            });    
+                            
+                        });
+ 
+
+
+                    </script>
+
+                    <style>
+                        .message2 {
+                            font-family: Arial, sans-serif;
+                            background-color: #f3f3f3;
+                            text-align: center;
+                            margin: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 100vh;
+                        }
+                        .container3 {
+                            margin-top: -130px;
+                        }
+                        .gif-container {
+                            margin-bottom: 20px;
+                        }
+                        .valentine-gif {
+                            width: 250px; /* Adjust the size as needed */
+                            border-radius: 50%; /* Make the gif inside the circle */
+                        }
+                        .sentence {
+                            color: white;
+                            font-size: 36px; /* Increasing font size for the sentence */
+                            margin-bottom: 20px; /* Add some spacing below the sentence */
+                            display: flex;
+                            align-items: center; /* vertically center the sentence */
+                            justify-content: center;
+                            margin-top: 55px;
+                        }
+                        .button-container {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 20px;
+                        }
+                        button {
+                            padding: 10px 20px;
+                            font-size: 18px;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                            margin: 10px;
+                            transition: all 0.3s ease;
+                            border-radius: 5px; /* Set border radius of the buttons to 5px */
+                            font-weight: bold; /* Make the button text bold */
+                        }
+                        #yesBtn {
+                            background-color: #4CAF50; /* Green background for "Yes" button */
+                        }
+                        #noBtn {
+                            background-color: #FF5733; /* Red background for "No" button */
+                        }
+                    </style>                
+                </div>
+            </div>
+        
+            <style>
+                .message2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }        
+                .flowercontainer2 {
+                    position: relative;
+                }        
+            </style>        
+        </div>
+        <!---------------------------FIM DA PERGUNTA---------------------------->
+
+
+
+        <!----------------------------FIM DA PAGINA----------------------------->
+
+      
+        <script>
+            onload = () =>{
+                document.body.classList.remove("container");
+            };
+            function start(){
+                //alert('Clicaste');
+                document.querySelector('#myDiv').style.bottom='-110px';
+                document.querySelector('#myDiv').style.display='block';
+                document.querySelector('#myDiv').classList.add('dv-show');
+
+                document.querySelector('.flowers').style.display='none';
+            }
+            function second(){
+                document.querySelector('#myquestion').style.display='block';                    
+                document.querySelector('.carta').style.display='none';
+            }
+        </script>
+    </body>
+</html>
